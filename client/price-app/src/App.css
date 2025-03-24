@@ -1,0 +1,7 @@
+#loading-icon {
+    display: block;
+    margin: 20px auto; /* Centers the loading icon */
+    width: 20px; /* Set width */
+    height: 20px; /* Set height */
+    animation: spin 1s linear infinite; /* Smooth spinning animation */
+}

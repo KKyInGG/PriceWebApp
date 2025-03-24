@@ -1,0 +1,83 @@
+.edit-stock-container {
+    width: 90%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+}
+
+
+.params {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    flex-wrap: wrap; 
+}
+
+.params label {
+    font-weight: bold;
+    white-space: nowrap; 
+}
+
+.params input {
+    width: 100px; 
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: right;
+}
+
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.buttons img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.buttons img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+    .edit-stock-container {
+        width: 95%; 
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .params {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .params input {
+        width: 80px; 
+    }
+
+    .buttons {
+        justify-content: center; 
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .params input {
+        width: 100%; 
+    }
+}

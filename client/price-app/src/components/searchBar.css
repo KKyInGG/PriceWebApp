@@ -1,0 +1,36 @@
+#search-container {
+    display: flex;
+    align-items: right;
+    width: 300px;
+    height: 40px;
+    margin: 20px auto;
+    border: 1px solid #0b0909;
+    padding: 5px;
+    border-radius: 100px;
+    border-width: 2px;
+    background-color: white;
+}
+
+#search-input {
+    flex: 1; 
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: none;
+    border-radius: 100px;
+    position: relative;
+}
+
+#earch-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;  /* Space between input and icon */
+    transition: opacity 0.3s;
+    position: relative;
+}
+
+#search-icon:hover {
+    opacity: 0.7;
+}
