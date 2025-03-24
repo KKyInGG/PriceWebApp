@@ -15,11 +15,6 @@ const SearchBar = ({onStockSelect}) => {
 
     const handleSearch = async () => {
         if (!query.trim()){
-            toast.dismiss(); 
-            toast.error("Please enter a stock ticker!", {
-                position: "top-right",
-                autoClose: 1000,
-            });
             return;
         } 
         try {
