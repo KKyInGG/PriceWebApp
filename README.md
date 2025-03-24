@@ -18,12 +18,14 @@ Clone the repository to your local destination using
 
 In the project server folder , you can run
 ### `cd server`
+### `npm install`
 ### `npx nodemon server.js`
 
 to intialize your backend
 
 In the project client/price-app folder , you can run
 ### `cd ../client/price-app`
+### `npm install`
 ### `npm start`
 
 to intialize your frontend
