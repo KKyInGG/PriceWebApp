@@ -12,7 +12,7 @@ export const WebSocketProvider = ({ children }) => {
 
     useEffect(() => {
         if (!socketRef.current) {
-            socketRef.current = socketIOClient("http://127.0.0.1:8080/");
+            socketRef.current = socketIOClient("http://127.0.0.1:5001/");
             console.log("Client WebSocket initialized...");
             socketRef.current.on("stockUpdate", (data) => {
                 setLatestStockData(data);

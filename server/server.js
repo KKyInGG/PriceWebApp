@@ -93,9 +93,6 @@ socketServer.on("connection", (socket) => {
 
 })
 
-// app.listen(PORT, () => {
-//     console.log(`Server running on http://127.0.0.1:${PORT}`);
-// });
 httpServer.listen(PORT, () => {
     console.log(`Socket Server running on http://127.0.0.1:${PORT}`);
 })
