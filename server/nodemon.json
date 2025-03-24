@@ -1,0 +1,5 @@
+{
+    "watch": ["server.js", "StockManager.js", "stock.js"], 
+    "ignore": ["node_modules/**", "data/**"],
+    "ext": "js,json"
+}

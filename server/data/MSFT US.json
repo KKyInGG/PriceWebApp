@@ -1,0 +1,9 @@
+{
+  "ticker": "MSFT US",
+  "open": 380,
+  "drift": 0.0001,
+  "volatility": 0.03,
+  "prices": [],
+  "date": "2025-03-24",
+  "lastEndIndex": 0
+}

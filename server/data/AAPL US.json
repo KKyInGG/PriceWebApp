@@ -1,0 +1,9 @@
+{
+  "ticker": "AAPL US",
+  "open": 210,
+  "drift": 0.0002,
+  "volatility": 0.05,
+  "prices": [],
+  "date": "2025-03-24",
+  "lastEndIndex": 0
+}
