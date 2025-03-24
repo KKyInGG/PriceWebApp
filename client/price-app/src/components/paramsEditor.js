@@ -37,10 +37,12 @@ const ParamsEditor = ({ stock }) => {
     const handleConfirmClick = async () => {
         try {
             if(!isFloat(tempDrift)){
+                toast.dismiss();
                 toast.error("Drift should be a valid number!", { position: "top-right", autoClose: 1000 });
                 return
             }
             if(!isFloat(tempVolatility)){
+                toast.dismiss();
                 toast.error("Volatility should be a valid number!", { position: "top-right", autoClose: 1000 });
                 return
             }
@@ -53,6 +55,7 @@ const ParamsEditor = ({ stock }) => {
             setVolatility(tempVolatility);
             setIsEditing(false);
         } catch (error) {
+            toast.dismiss();
             toast.error(error.response? error.response.data.error : error.message, { position: "top-right", autoClose: 1000 });
         }
     };

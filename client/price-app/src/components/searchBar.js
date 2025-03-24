@@ -15,8 +15,12 @@ const SearchBar = ({onStockSelect}) => {
 
     const handleSearch = async () => {
         if (!query.trim()){
-            toast.error("Please enter search text!")
-            return
+            toast.dismiss(); 
+            toast.error("Please enter a stock ticker!", {
+                position: "top-right",
+                autoClose: 1000,
+            });
+            return;
         } 
         try {
             const response = await axios.get(`http://localhost:5001/api/search?query=${query}`);
@@ -27,6 +31,7 @@ const SearchBar = ({onStockSelect}) => {
             currentQuery.current = query
         } catch (error) {
             console.log(error)
+            toast.dismiss();
             toast.error(error.response? error.response.data.error : error.message, { position: "top-right", autoClose: 1000 });
 
         }
