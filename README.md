@@ -13,7 +13,7 @@ Ensure the following installed:
 3. nodemon
 
 Clone the repository to your local destination using
-### `git clone https://github.com/your-username/your-repo.git`
+### `git clone https://github.com/KKyInGG/PriceWebApp.git`
 ### `cd PriceWebApp`
 
 In the project server folder , you can run
