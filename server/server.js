@@ -18,6 +18,8 @@ const socketServer = new Server( httpServer, {
 app.use(cors());
 app.use(express.json());
 
+// http
+// get seach call
 app.get("/api/search", (req, res) => {
     const name = req.query.query?.toUpperCase();
     const stock = stockManager.updateStockPrice(name);
@@ -33,6 +35,7 @@ function updateStock(socket, subscriptions){
     socket.emit("stockUpdate", updatedStock);
 }
 
+// post call on votality and drift
 app.post("/api/update",(req, res) => {
     const updatedStock = stockManager.setStockParams(req.body);
     if(!updatedStock){
@@ -47,9 +50,9 @@ app.post("/api/update",(req, res) => {
         volatility: updatedStock.volatility});
 })
 
+// socket
 let subscriptions = new Map();
 socketServer.on("connection", (socket) => {
-
     console.log("Socket Server Connect Intitialize...")   
 
     const getMsUntilNextMinute = () => {
@@ -90,9 +93,9 @@ socketServer.on("connection", (socket) => {
 
 })
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://127.0.0.1:${PORT}`);
-});
-httpServer.listen(SOCKETPORT, () => {
-    console.log(`Socket Server running on http://127.0.0.1:${SOCKETPORT}`);
+// app.listen(PORT, () => {
+//     console.log(`Server running on http://127.0.0.1:${PORT}`);
+// });
+httpServer.listen(PORT, () => {
+    console.log(`Socket Server running on http://127.0.0.1:${PORT}`);
 })
